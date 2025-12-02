@@ -100,9 +100,9 @@
                 category: CATEGORIES.SECURITY,
                 question: "What does your provider’s security and HIPAA compliance package look like?",
                 options: [
-                    { label: "A", text: "We mostly just have antivirus and a firewall. HIPAA is largely up to us.", score: 0 },
-                    { label: "B", text: "Standard tools (MFA, basic AV), but risk assessments are rare or require extra fees.", score: 5 },
-                    { label: "C", text: "Comprehensive: MFA, EDR/MDR, and regular HIPAA assessments included.", score: 10 }
+                    { label: "A", text: "We mostly just have antivirus and a firewall. Security and HIPAA is largely up to us.", score: 0 },
+                    { label: "B", text: "Standard tools (MFA, basic antivirus), but assessments are one-off.", score: 5 },
+                    { label: "C", text: "Comprehensive: MFA, EDR/MDR, and conduct regular assessments.", score: 10 }
                 ]
             },
             // Efficiency Group
@@ -134,7 +134,7 @@
                 question: "How is your provider guiding you on AI adoption?",
                 options: [
                     { label: "A", text: "They haven't mentioned it, or just said 'be careful'.", score: 0 },
-                    { label: "B", text: "Generic advice or basic policy templates.", score: 5 },
+                    { label: "B", text: "Generic advice like "use copilot" and an AI policy template.", score: 5 },
                     { label: "C", text: "Actively educating us, piloting tools, and setting up safeguards.", score: 10 }
                 ]
             },
@@ -144,9 +144,9 @@
                 category: CATEGORIES.EFFICIENCY,
                 question: "How would you describe your relationship regarding planning and strategy?",
                 options: [
-                    { label: "A", text: "Break/Fix. We call when something breaks; they send a bill.", score: 0 },
-                    { label: "B", text: "Monthly fee, but we rarely discuss strategy or long-term roadmaps.", score: 5 },
-                    { label: "C", text: "Proactive partnership with regular roadmap meetings.", score: 10 }
+                    { label: "A", text: "Break/Fix. We call when something breaks; they fix it.", score: 0 },
+                    { label: "B", text: "Some proactive support, but we rarely discuss strategy or long-term roadmaps.", score: 5 },
+                    { label: "C", text: "Signficant partnership with regular roadmap meetings.", score: 10 }
                 ]
             },
             // Strategy Group
@@ -157,7 +157,7 @@
                 options: [
                     { label: "A", text: "No, they offer the same services they did 5 years ago.", score: 0 },
                     { label: "B", text: "Keeping the lights on, but no new healthcare innovation teams.", score: 5 },
-                    { label: "C", text: "Yes, dedicated experts (AI, Cyber) and next-gen vendor relationships.", score: 10 }
+                    { label: "C", text: "Yes, dedicated experts and next-gen vendor relationships.", score: 10 }
                 ]
             },
             // Efficiency Group
@@ -188,8 +188,8 @@
                 category: CATEGORIES.STRATEGY,
                 question: "How does the provider advise on infrastructure (Cloud vs. On-Premise)?",
                 options: [
-                    { label: "A", text: "They just patch old servers; haven't discussed a shift.", score: 0 },
-                    { label: "B", text: "They mention cloud, but strategy for our data is unclear.", score: 5 },
+                    { label: "A", text: "They just fix servers we have; haven't discussed a shift.", score: 0 },
+                    { label: "B", text: "They have cloud services, but strategy is unclear.", score: 5 },
                     { label: "C", text: "Clear strategy based on performance, cost, and security specifically for us.", score: 10 }
                 ]
             },
@@ -364,13 +364,13 @@
             let zone, diagnosis, action, cta, colorClass;
 
             if (score <= 50) {
-                zone = "The 'At Risk' Zone";
+                zone = "The 'Risk' Zone";
                 diagnosis = "Your provider is acting as a utility mechanic, not a partner. You are likely overexposed to security risks and missing out on efficiency gains.";
                 action = "Take these results to your provider and ask how they can provide this core expertise. It may cost more, but you need to make sure your practice is set up for success.";
                 cta = "Book a Free Risk Audit";
                 colorClass = "text-red-600";
             } else if (score <= 85) {
-                zone = "The 'Stable but Stagnant' Zone";
+                zone = "The 'Stable' Zone";
                 diagnosis = "Your IT is functional, but likely generic. They keep you safe, but they aren't helping you grow or navigate the changing healthcare landscape.";
                 action = "Challenge your current provider to be more strategic. Consider a second opinion to improve the attention you are getting or provide you with a better partner.";
                 cta = "Download Strategic Checklist";
